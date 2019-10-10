@@ -35,23 +35,29 @@
 				console.log("Что-то пошло не так!");
 				i--;
 			}
-		};
+		}
 	}
 	chooseExpenses();
 
-	appData.moneyPerDay = (appData.budget / 30).toFixed();
+	function detectDayBudget () {
+		appData.moneyPerDay = (appData.budget / 30).toFixed();
 
-	alert(appData.moneyPerDay / 30);
-
-	if(appData.moneyPerDay < 100) {
-		console.log("минимальный уровень достатка");
-	} else if(appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
-		console.log("Средний уровень достатка");
-	} else if(appData.moneyPerDay > 2000) {
-		console.log("Высокий уровень достатка");
-	} else {
-		console.log("Произошла ошибка");
+		alert("Ежедневный бюджет: " + appData.moneyPerDay + "руб");
 	}
+	detectDayBudget();
+
+	function detectLevel () {
+		if(appData.moneyPerDay < 100) {
+			console.log("минимальный уровень достатка");
+		} else if(appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
+			console.log("Средний уровень достатка");
+		} else if(appData.moneyPerDay > 2000) {
+			console.log("Высокий уровень достатка");
+		} else {
+			console.log("Произошла ошибка");
+		}
+	}
+	detectLevel();
 
 	function checkSavings() {
 		if(appData.savings == true) {
@@ -63,4 +69,13 @@
 		}
 	}
 	checkSavings();
+
+	function chooseOptExpenses () {
+		for (let i = 0; i < 3; i++) {
+			let questionExpenses = +prompt("Статья необязательных расходов?");
+			appData.optionalExpenses[i] = questionExpenses;
+			console.log(appData.optionalExpenses);
+		}
+	}
+	chooseOptExpenses();
 })();
