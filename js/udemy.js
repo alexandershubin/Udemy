@@ -61,27 +61,57 @@
 // 	return(a+b);
 // }
 
-let calc = (a,b) => a+b;
-console.log(calc(3,4));
-console.log(calc(5,6));
+// let calc = (a,b) => a+b;
+// console.log(calc(3,4));
+// console.log(calc(5,6));
 
 
-function retVar() {
-	let num = 50;
-	return num;
-}
+// function retVar() {
+// 	let num = 50;
+// 	return num;
+// }
 
-let anotherNum = retVar();
+// let anotherNum = retVar();
 
-console.log(anotherNum);
+// console.log(anotherNum);
 
-let str = "test";
-console.log(str.length);
-console.log(str.toUpperCase());
-console.log(str.toLowerCase());
+// let str = "test";
+// console.log(str.length);
+// console.log(str.toUpperCase());
+// console.log(str.toLowerCase());
 
-let twelve = "12.2px";
-// console.log(Math.round(twelve));
-console.log(parseInt(twelve));
-console.log(parseFloat(twelve));
+// let twelve = "12.2px";
+// // console.log(Math.round(twelve));
+// console.log(parseInt(twelve));
+// console.log(parseFloat(twelve));
+
+// let arr = ['first', 2, 3, 'four', 5];
+// arr.forEach(function(item, i, mass) {
+//   console.log(i + ': '+ item + ' (массив: ' + mass + ")");
+// });
+
+// // for(let i = 0; i < arr.length; i++) {
+// //   console.log(arr[i]);
+// // }
+// console.log(arr);
+
+// let mass = [1, 3, 4, 6, 7];
+// for(let key of mass) {
+//   console.log(key);
+// }
+// let answer = prompt("", ""),
+//     arr = [];
+
+//     arr = answer.split(',');
+//     console.log(arr);
+// let arr = ["eqwe", "qwsa", "qq", "zzz"],
+//     i = arr.join(', ');
+//     console.log(i);
+
+let arr = [1, 15, 4],
+     i = arr.sort(compareNem);
+     function compareNem(a,b) {
+      return a-b;
+     }
+     console.log(arr);
 })();
